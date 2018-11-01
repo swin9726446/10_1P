@@ -37,22 +37,16 @@ public class MainActivity extends AppCompatActivity {
         }
         protected void onPostExecute() {}
 
+        /**
+         * Updates the main thread. Since the point is to report updates,
+         * it follows suit to send the parameters and process them here.
+         * Keep work to a minimum though, it's only an update, not a finale!
+         * @param params - materials to work with.
+         *               [0] - Text View to be updated
+         *               [1] - String to update the text view with.
+         */
         protected void onProgressUpdate(Object... params){
             ((TextView)params[0]).setText(params[1].toString());
         }
     }
 }
-/*
-public void onClick(View v) {
-    new DownloadImageTask().execute("http://example.com/image.png");
-}
-
-private class DownloadImageTask extends AsyncTask {
-    protected Bitmap doInBackground(String... urls) {
-        return loadImageFromNetwork(urls[0]);
-    }
-
-    protected void onPostExecute(Bitmap result) {
-        mImageView.setImageBitmap(result);
-    }
-}//*/

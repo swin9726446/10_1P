@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">10_1P</string>
+    <string name="strStart">Start</string>
+    <string name="strPressStart">Press Start</string>
 </resources>
